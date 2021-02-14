@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Wulfheart\Burst\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BurstCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-burst';
 
     public $description = 'My command';
 
