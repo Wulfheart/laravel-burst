@@ -2,9 +2,10 @@
 
 namespace Wulfheart\Burst;
 
+use Laravel\Fortify\Fortify;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wulfheart\Burst\Commands\BurstCommand;
+use Wulfheart\Burst\Commands\BurstInstallCommand;
 
 class BurstServiceProvider extends PackageServiceProvider
 {
@@ -16,10 +17,13 @@ class BurstServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-burst')
+            ->name('burst')
             ->hasConfigFile()
             ->hasViews()
+            ->hasAssets()
+            ->hasRoute('web')
             ->hasMigration('create_laravel_burst_table')
-            ->hasCommand(BurstCommand::class);
+            ->hasCommand(BurstInstallCommand::class);
+
     }
 }
