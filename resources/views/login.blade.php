@@ -1,7 +1,7 @@
 @extends('burst::layout.base')
 
 @section('title')
-{{ __('burst::trans.register.login.header') }}
+{{ __('burst::trans.login.header') }}
 @endsection
 
 
