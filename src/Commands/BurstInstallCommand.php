@@ -8,11 +8,14 @@ class BurstInstallCommand extends Command
 {
     public $signature = 'burst:install';
 
-    public $description = 'Installs laravel-burst';
+    public $description = 'Installs Burst';
 
     public function handle()
     {
-        $this->comment('Publishing burst Assets');
-        $this->callSilent('vendor:publish', ['--tag' => 'burst-assets', '--force']);
+        $this->comment('Publishing Burst Assets');
+        $this->callSilent('vendor:publish', ['--tag' => 'burst-assets', '--force' => true]);
+
+        $this->info('Burst assets published successfully.');
+
     }
 }

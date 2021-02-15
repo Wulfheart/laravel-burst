@@ -21,6 +21,7 @@ class BurstServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasAssets()
+            ->hasTranslations()
             ->hasRoute('web')
             ->hasMigration('create_laravel_burst_table')
             ->hasCommand(BurstInstallCommand::class);

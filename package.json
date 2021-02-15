@@ -7,11 +7,13 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.4",
+    "cross-env": "^7.0.3",
     "postcss": "^8.2.6",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.3"
   },
   "scripts": {
-    "build": "npx tailwindcss-cli@latest build -o ./resources/dist/tailwind.css"
+    "build": "./node_modules/.bin/tailwindcss build -o ./resources/dist/tailwind.css",
+    "prod": "cross-env NODE_ENV=production ./node_modules/.bin/tailwindcss build -o ./resources/dist/tailwind.css"
   }
 }
